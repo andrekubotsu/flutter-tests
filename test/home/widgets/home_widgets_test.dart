@@ -1,10 +1,13 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_test/flutter_test.dart';
+import 'package:fpflutter/login/login_page.dart';
 import 'package:fpflutter/main.dart';
 
 void main() {
   testWidgets('Entendendo teste de widgets', (WidgetTester tester) async {
-    await tester.pumpWidget(MyApp());
+    await tester.pumpWidget(MaterialApp(
+      home: LoginPage(),
+    ));
 
     expect(find.text('Login'), findsOneWidget);
     expect(find.widgetWithText(TextFormField, 'Nome'), findsOneWidget);
